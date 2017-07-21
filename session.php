@@ -2,6 +2,8 @@
    include('config.php');
    session_start();
 
+   $_SESSION['counter'] = 0;
+
    $user_check = $_SESSION['login_user'];
 
    $ses_sql = mysqli_query($db,"select username from customers where username = '$user_check' ");
