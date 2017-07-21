@@ -14,21 +14,20 @@
 
 <body>
   <a href="main.php">Main</a>
+  <a href="menu.php">Menu</a>
 
 <!-- This section is where a flight is chosen and added to the shopping cart -->
-  <h1>Choose a Flight:</h1>
+  <h1>Choose a Seating Option:</h1>
 
   <form action="shoppingcart.php" method="post">
-    <select name="flight">
+    <select name="seating">
       <option></option>
-      <!--Populate the dropdown menus with flight inventory options from MySQL Database-->
-      <?php include('flight.php'); ?>
-
+      <option>First Class</option>
+      <option>Business Class</option>
+      <option>Premium Economy</option>
+      <option>Economy</option>
     <input type="submit" value="Add to Cart">
   </form>
-
-  <br>
-  <a href="viewcart.php">View Cart</a>
 
 </body>
 

@@ -10,24 +10,63 @@
 		//If a flight option is chosen, add it to the cart
 		if($_POST['flight'] != ''){
 			$flight = $_POST['flight'];
-			$_SESSION['counter']++;
-			$_SESSION['shoppingCart'][$_SESSION['counter']][0] =  $flight;
+			$_SESSION['counter']++; //Add another item to the cart
+
+			$_SESSION['shoppingCart'][$_SESSION['counter']][0] =  $flight; //Set the new item's name
 			$result = $conn->query("select price from inventory where name='$flight'");
 			$row = $result->fetch_assoc();
-			$_SESSION['shoppingCart'][$_SESSION['counter']][1] = $row['price'];
+
+			$_SESSION['shoppingCart'][$_SESSION['counter']][1] = $row['price']; //Set the price of the new item (from DB)
+			header("location: seating.php");
 		}
 
 		//If a rental car option is chosen, add it to the cart
 		if($_POST['car'] != ''){
 			$car = $_POST['car'];
-			$_SESSION['counter']++;
-			$_SESSION['shoppingCart'][$_SESSION['counter']][0] =  $car;
+			$_SESSION['counter']++; //Add another item to the cart
+			$_SESSION['shoppingCart'][$_SESSION['counter']][0] = $car; //Set the new item's name
+
 			$result = $conn->query("select price from inventory where name='$car'");
 			$row = $result->fetch_assoc();
-			$_SESSION['shoppingCart'][$_SESSION['counter']][1] = $row['price'];
+
+			$_SESSION['shoppingCart'][$_SESSION['counter']][1] = $row['price']; //Set the price of the new item (from DB)
+			header("location: chooseparking.php");
 		}
 
-	}
+		//If a seating option is chosen, add it to the cart (prices vary)
+		if($_POST['seating'] != ''){
+			$seating = $_POST['seating'];
+			$_SESSION['counter']++; //Add another item to the cart
 
-	header("location: menu.php");
-?>
+			$_SESSION['shoppingCart'][$_SESSION['counter']][0] = $seating; //Set the new item's name
+			$_SESSION['shoppingCart'][$_SESSION['counter']][1] = 0; //Set the default price of the new item to 0
+
+			if($seating == "First Class"){ //If the seating is First Class, add 200 to the item's price
+				$_SESSION['shoppingCart'][$_SESSION['counter']][1] = 200;
+			}else if($seating == "Business Class"){ //If the seating is Business Class, add 100 to the item's price
+				$_SESSION['shoppingCart'][$_SESSION['counter']][1] = 100;
+			}else if($seating == "Premium Economy"){ //If the seating is Premium Economy, add 50 to the item's price
+				$_SESSION['shoppingCart'][$_SESSION['counter']][1] = 50;
+			}
+			header("location: choosecar.php");
+		}
+
+		//If a seating option is chosen, add it to the cart (prices vary)
+		if($_POST['parking'] != ''){
+			$parking = $_POST['parking'];
+			$_SESSION['counter']++; //Add another item to the cart
+
+			$_SESSION['shoppingCart'][$_SESSION['counter']][0] = $parking; //Set the new item's name
+			$_SESSION['shoppingCart'][$_SESSION['counter']][1] = 0; //Set the default price of the new item to 0
+
+			if($parking == "VIP"){ //If the parking is VIP, add 50 to the item's price
+				$_SESSION['shoppingCart'][$_SESSION['counter']][1] = 50;
+			}else if($parking == "Lot A"){ //If the parking is Lot A, add 35 to the item's price
+				$_SESSION['shoppingCart'][$_SESSION['counter']][1] = 35;
+			}else if($parking == "Lot B"){ //If the parking is Lot B, add 15 to the item's price
+				$_SESSION['shoppingCart'][$_SESSION['counter']][1] = 15;
+			}
+			header("location: viewcart.php");
+		}
+	}
+	?>
