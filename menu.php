@@ -14,56 +14,33 @@
 
 <body>
   <a href="main.php">Main</a>
+
+<!-- This section is where a flight is chosen and added to the shopping cart -->
   <h1>Choose a Flight:</h1>
 
   <form action="shoppingcart.php" method="post">
-  <select name="flight">
-    <option></option>
-  <?php
-  $conn = new mysqli('localhost', 'root', '', 'finalproject')
-  or die ('Cannot connect to db');
+    <select name="flight">
+      <option></option>
+      <!--Populate the dropdown menus with flight inventory options from MySQL Database-->
+      <?php include('flight.php'); ?>
 
-      $result = $conn->query("select name from inventory where itype='flight'");
-
-      while ($row = $result->fetch_assoc()) {
-
-                    unset($id, $name);
-                    $name = $row['name'];
-                    echo '<option>'.$name.'</option>';
-
-  }
-
-      echo "</select>";
-  ?>
-  <input type="submit" value="Add to Cart">
-
-  <h1>Choose a Rental Car:</h1>
-
-  <select name="car">
-    <option></option>
-  <?php
-  $conn = new mysqli('localhost', 'root', '', 'finalproject')
-  or die ('Cannot connect to db');
-
-      $result = $conn->query("select name from inventory where itype='car'");
-
-      while ($row = $result->fetch_assoc()) {
-
-                    unset($id, $name);
-                    $name = $row['name'];
-                    echo '<option>'.$name.'</option>';
-
-  }
-
-      echo "</select>";
-  ?>
-  <input type="submit" value="Add to Cart">
+    <input type="submit" value="Add to Cart">
   </form>
 
-  <?php
-    // Output whole array
-    print_r($_SESSION['shoppingCart']);
-  ?>
+<!-- This section is where a rental car is chosen and added to the shopping cart -->
+  <h1>Choose a Rental Car:</h1>
+
+  <form action="shoppingcart.php" method="post">
+    <select name="car">
+      <option></option>
+      <!--Populate the dropdown menus with car inventory options from MySQL Database-->
+      <?php include('car.php'); ?>
+
+    <input type="submit" value="Add to Cart">
+  </form>
+
+  <br>
+  <a href="viewcart.php">View Cart</a>
 
 </body>
 
