@@ -26,8 +26,8 @@
       <option value="Business Class">Business Class</option>
       <option value="Economy">Economy</option>
     </select>
-    <input id="cart" type="submit" value="Add to Cart">
-    <input type="text" name="pricesubmit" id="pricesubmit" value="9999" style="visibility: hidden">
+    <input id="cart" type="submit" value="Add to Cart" disabled>
+    <input type="text" name="pricesubmit" id="pricesubmit" value="0" style="visibility: hidden">
   </form>
 
   <p id="available"></p>

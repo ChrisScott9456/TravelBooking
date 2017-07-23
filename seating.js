@@ -43,5 +43,7 @@ function seatsAvailable() {
       document.getElementById("cart").disabled = true;
       document.getElementById("available").innerHTML = Eava + " of 286 seats available! Please choose another option!";
     }
+  }else if(name == ""){
+    document.getElementById("cart").disabled = true;
   }
 }

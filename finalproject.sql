@@ -4,13 +4,26 @@ CREATE TABLE IF NOT EXISTS `inventory` (
   `id` int NOT NULL AUTO_INCREMENT,
   `itype` varchar(20) DEFAULT NULL,
   `name` varchar(20) DEFAULT NULL,
-  `price` int(11) DEFAULT NULL,
+  `price` int(10) DEFAULT NULL,
   primary key (id));
   
 CREATE TABLE IF NOT EXISTS `customers` (
   `id` int NOT NULL AUTO_INCREMENT,
   `username` varchar(20) DEFAULT NULL,
   `password` varchar(20) DEFAULT NULL,
+  primary key (id));
+  
+CREATE TABLE IF NOT EXISTS `orders` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `username` varchar(20) DEFAULT NULL,
+  `flight` varchar(20) DEFAULT NULL,
+  `flightprice` int(10) DEFAULT NULL,
+  `seating` varchar(20) DEFAULT NULL,
+  `seatprice` int(10) DEFAULT NULL,
+  `rentalcar` varchar(20) DEFAULT NULL,
+  `carprice` int(10) DEFAULT NULL,
+  `parking` varchar(20) DEFAULT NULL,
+  `parkingprice` int(10) DEFAULT NULL,
   primary key (id));
   
 INSERT INTO customers (username, password) VALUES
@@ -71,5 +84,4 @@ INSERT INTO inventory (itype, name, price) VALUES
 	('car', 'SUV', '300'),
 	('car', 'Compact', '150'),
 	('car', 'Midsize', '200'),
-	('car', 'Luxury', '500'),
-	('parking', 'Parking', '50');
+	('car', 'Luxury', '500');
