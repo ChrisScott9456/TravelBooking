@@ -6,6 +6,7 @@
 	or die ('Cannot connect to db');
 
 	if($_SERVER["REQUEST_METHOD"] == "POST") {
+		$price = $_POST['pricesubmit'];
 
 		//If a flight option is chosen, add it to the cart
 		if($_POST['flight'] != ''){
@@ -20,6 +21,17 @@
 			header("location: seating.php");
 		}
 
+		//If a seating option is chosen, add it to the cart (prices vary)
+		if($_POST['seating'] != ''){
+			$seating = $_POST['seating'];
+			$_SESSION['counter']++; //Add another item to the cart
+
+			$_SESSION['shoppingCart'][$_SESSION['counter']][0] = $seating; //Set the new item's name
+			$_SESSION['shoppingCart'][$_SESSION['counter']][1] = $price; //Set the new item's price
+
+			header("location: choosecar.php");
+		}
+
 		//If a rental car option is chosen, add it to the cart
 		if($_POST['car'] != ''){
 			$car = $_POST['car'];
@@ -31,24 +43,6 @@
 
 			$_SESSION['shoppingCart'][$_SESSION['counter']][1] = $row['price']; //Set the price of the new item (from DB)
 			header("location: chooseparking.php");
-		}
-
-		//If a seating option is chosen, add it to the cart (prices vary)
-		if($_POST['seating'] != ''){
-			$seating = $_POST['seating'];
-			$_SESSION['counter']++; //Add another item to the cart
-
-			$_SESSION['shoppingCart'][$_SESSION['counter']][0] = $seating; //Set the new item's name
-			$_SESSION['shoppingCart'][$_SESSION['counter']][1] = 0; //Set the default price of the new item to 0
-
-			if($seating == "First Class"){ //If the seating is First Class, add 200 to the item's price
-				$_SESSION['shoppingCart'][$_SESSION['counter']][1] = 200;
-			}else if($seating == "Business Class"){ //If the seating is Business Class, add 100 to the item's price
-				$_SESSION['shoppingCart'][$_SESSION['counter']][1] = 100;
-			}else if($seating == "Premium Economy"){ //If the seating is Premium Economy, add 50 to the item's price
-				$_SESSION['shoppingCart'][$_SESSION['counter']][1] = 50;
-			}
-			header("location: choosecar.php");
 		}
 
 		//If a seating option is chosen, add it to the cart (prices vary)

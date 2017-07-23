@@ -19,15 +19,19 @@
 <!-- This section is where a flight is chosen and added to the shopping cart -->
   <h1>Choose a Seating Option:</h1>
 
-  <form action="shoppingcart.php" method="post">
-    <select name="seating">
+  <form action="shoppingcart.php" onclick="seatsAvailable()" method="post">
+    <select name="seating" id="seating">
       <option></option>
-      <option>First Class</option>
-      <option>Business Class</option>
-      <option>Premium Economy</option>
-      <option>Economy</option>
-    <input type="submit" value="Add to Cart">
+      <option value="First Class">First Class</option>
+      <option value="Business Class">Business Class</option>
+      <option value="Economy">Economy</option>
+    <input id="cart" type="submit" value="Add to Cart">
+    <p id="pricesubmit" value="9999"></p>
   </form>
+
+  <p id="available"></p>
+
+  <script src="seating.js"></script>
 
 </body>
 
