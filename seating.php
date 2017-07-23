@@ -25,8 +25,9 @@
       <option value="First Class">First Class</option>
       <option value="Business Class">Business Class</option>
       <option value="Economy">Economy</option>
+    </select>
     <input id="cart" type="submit" value="Add to Cart">
-    <p id="pricesubmit" value="9999"></p>
+    <input type="text" name="pricesubmit" id="pricesubmit" value="9999" style="visibility: hidden">
   </form>
 
   <p id="available"></p>

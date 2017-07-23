@@ -18,7 +18,7 @@ function seatsAvailable() {
       price = Math.floor((200 + ((30 / FCava) * 20) )); //Calculate price of tickets (original price + (total seats / available seats) * (10% of original price))
       document.getElementById("available").innerHTML = FCava + " of 30 seats available!";
       document.getElementById("cart").disabled = false;
-      document.getElementById("pricesubmit").value = price;
+      document.getElementById("pricesubmit").setAttribute("value", price);
     }else{
       document.getElementById("cart").disabled = true;
       document.getElementById("available").innerHTML = FCava + " of 30 seats available! Please choose another option!";
@@ -28,7 +28,7 @@ function seatsAvailable() {
       price = Math.floor((100 + ((45 / BCava) * 10) )); //Calculate price of tickets (original price + (total seats / available seats) * (10% of original price))
       document.getElementById("available").innerHTML = BCava + " of 45 seats available!";
       document.getElementById("cart").disabled = false;
-      document.getElementById("pricesubmit").value = price;
+      document.getElementById("pricesubmit").setAttribute("value", price);
     }else{
       document.getElementById("cart").disabled = true;
       document.getElementById("available").innerHTML = BCava + " of 45 seats available! Please choose another option!";

@@ -6,7 +6,6 @@
 	or die ('Cannot connect to db');
 
 	if($_SERVER["REQUEST_METHOD"] == "POST") {
-		$price = $_POST['pricesubmit'];
 
 		//If a flight option is chosen, add it to the cart
 		if($_POST['flight'] != ''){
@@ -24,6 +23,7 @@
 		//If a seating option is chosen, add it to the cart (prices vary)
 		if($_POST['seating'] != ''){
 			$seating = $_POST['seating'];
+			$price = $_POST['pricesubmit'];
 			$_SESSION['counter']++; //Add another item to the cart
 
 			$_SESSION['shoppingCart'][$_SESSION['counter']][0] = $seating; //Set the new item's name
