@@ -21,9 +21,8 @@
 
 </head>
 
-<body>
-  <a href="main.php">Main</a>
-  <a href="menu.php">Menu</a>
+<body class="centered">
+  <a href="menu.php">Start Over</a>
 
 <!-- This section is where a flight is chosen and added to the shopping cart -->
   <h1>Choose a Parking Option:</h1>
@@ -34,20 +33,20 @@
 
   <p id="datez"></p>
 
-  <form action="shoppingcart.php" onclick="parkingAvailable()" method="post">
-    <select name="parking" id="parking">
-      <option></option>
-      <option value="VIP">VIP Parking</option>
-      <option value="Lot A">Lot A Parking</option>
-      <option value="Lot B">Lot B Parking</option>
-      <option value="Lot C">Lot C Parking</option>
-    </select>
-    <input id="cart" type="submit" value="Add to Cart" disabled>
-    <input type="text" name="pricesubmit" id="pricesubmit" value="0" style="visibility: hidden">
-  </form>
+    <form action="shoppingcart.php" onclick="parkingAvailable()" method="post">
+      <select name="parking" id="parking" disabled>
+        <option></option>
+        <option value="VIP">VIP Parking</option>
+        <option value="Lot A">Lot A Parking</option>
+        <option value="Lot B">Lot B Parking</option>
+        <option value="Lot C">Lot C Parking</option>
+      </select>
+      <input id="cart" type="submit" value="Add to Cart" disabled><br>
+      <input type="text" name="pricesubmit" id="pricesubmit" value="0" style="visibility: hidden">
+    </form>
 
-  <p id="available"></p>
-  <p id="pricez"></p>
+    <p id="available"></p>
+    <p id="pricez"></p>
 
   <script src="parking.js"></script>
 

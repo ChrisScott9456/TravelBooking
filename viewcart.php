@@ -12,8 +12,8 @@
 
 </head>
 
-<body>
-  <a href="menu.php">Menu</a>
+<body class="centered">
+  <a href="menu.php">Start Over</a>
 
   <br>
 

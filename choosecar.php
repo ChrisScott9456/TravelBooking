@@ -22,8 +22,8 @@
 
 </head>
 
-<body>
-  <a href="main.php">Main</a>
+<body class="centered">
+  <a href="menu.php">Start Over</a>
 
 <!-- This section is where a rental car is chosen and added to the shopping cart -->
   <h1>Choose a Rental Car:</h1>

@@ -38,3 +38,9 @@ td {
   background-color: #2098D1;
   color: white;
 }
+
+.centered {
+  margin: auto;
+  text-align: center;
+  width: 50%;
+}

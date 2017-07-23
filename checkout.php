@@ -23,11 +23,16 @@
       text-align: center;
     }
 
+    .centered {
+      margin: auto;
+      text-align: center;
+    }
+
   </style>
 </head>
 
-<body>
-  <a href="menu.php">Menu</a>
+<body class="centered">
+  <a href="menu.php">Start Over</a>
 
   <br>
 
@@ -72,7 +77,7 @@
   <br>
 
   <div id="button">
-    <a href="checkout.php"><button type="button">Checkout</button></a>
+    <a href="menu.php"><button type="button">Checkout</button></a>
   </div>
 
   <script src="creditcard.js"></script>
