@@ -14,8 +14,8 @@
 </head>
 
 <body>
-  <a href="login.php">Login</a><br>
-  <a href="menu.php">Menu</a>
+  <a href="login.php"><button id="login" type="button">Login</button></a>
+  <a href="menu.php"><button id="menu" type="button">Booking</button></a>
 
 </body>
 

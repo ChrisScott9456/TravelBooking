@@ -1,5 +1,6 @@
 <?php
   session_start();
+  session_destroy();
 ?>
 
 <!DOCTYPE html>
@@ -36,9 +37,6 @@
 
     <input id="cart" type="submit" value="Add to Cart" disabled>
   </form>
-
-  <br>
-  <a href="viewcart.php">View Cart</a>
 
 </body>
 
