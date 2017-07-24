@@ -1,4 +1,5 @@
 DROP TABLE IF EXISTS `inventory`;
+DROP TABLE IF EXISTS `customers`;
 
 CREATE TABLE IF NOT EXISTS `inventory` (
   `id` int NOT NULL AUTO_INCREMENT,
@@ -59,19 +60,19 @@ INSERT INTO inventory (itype, name, price) VALUES
 	('flight', 'Montana', '300'),
 	('flight', 'Nebraska', '400'),
 	('flight', 'Nevada', '350'),
-	('flight', 'New Hampshire', '250'),
-	('flight', 'New Jersey', '250'),
-	('flight', 'New Mexico', '350'),
-	('flight', 'New York', '450'),
-	('flight', 'North Carolina', '125'),
-	('flight', 'North Dakota', '300'),
+	('flight', 'New_Hampshire', '250'),
+	('flight', 'New_Jersey', '250'),
+	('flight', 'New_Mexico', '350'),
+	('flight', 'New_York', '450'),
+	('flight', 'North_Carolina', '125'),
+	('flight', 'North_Dakota', '300'),
 	('flight', 'Ohio', '250'),
 	('flight', 'Oklahoma', '250'),
 	('flight', 'Oregon', '650'),
 	('flight', 'Pennsylvania', '350'),
-	('flight', 'Rhode Island', '250'),
-	('flight', 'South Carolina', '150'),
-	('flight', 'South Dakota', '375'),
+	('flight', 'Rhode_Island', '250'),
+	('flight', 'South_Carolina', '150'),
+	('flight', 'South_Dakota', '375'),
 	('flight', 'Tennessee', '150'),
 	('flight', 'Texas', '500'),
 	('flight', 'Utah', '520'),
@@ -81,7 +82,7 @@ INSERT INTO inventory (itype, name, price) VALUES
 	('flight', 'West Virginia', '350'),
 	('flight', 'Wisconsin', '250'),
 	('flight', 'Wyoming', '350'),
-	('car', 'SUV Rental Car', '300'),
-	('car', 'Compact Rental Car', '150'),
-	('car', 'Midsize Rental Car', '200'),
-	('car', 'Luxury Rental Car', '500');
+	('car', 'SUV_Rental_Car', '300'),
+	('car', 'Compact_Rental_Car', '150'),
+	('car', 'Midsize_Rental_Car', '200'),
+	('car', 'Luxury_Rental_Car', '500');

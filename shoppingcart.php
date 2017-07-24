@@ -10,7 +10,7 @@
 		//If a flight option is chosen, add it to the cart
 		if($_POST['flight'] != ''){
 			$flight = $_POST['flight'];
-			$flight = preg_replace("/[^a-zA-Z]+/", "", $flight);
+			$flight = preg_replace("/[^a-zA-Z_]+/", "", $flight);
 			$_SESSION['counter']++; //Add another item to the cart
 
 			$_SESSION['shoppingCart'][$_SESSION['counter']][0] =  $flight; //Set the new item's name
@@ -30,7 +30,7 @@
 			$_SESSION['shoppingCart'][$_SESSION['counter']][0] = $seating; //Set the new item's name
 			$_SESSION['shoppingCart'][$_SESSION['counter']][1] = $price; //Set the new item's price
 
-			header("location: choosecar.php");
+			header("location: car.php");
 		}
 
 		//If a rental car option is chosen, add it to the cart

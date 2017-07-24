@@ -1,6 +1,13 @@
+html {
+  background-image: url("bg.png");
+  background-position: center;
+  background-size: cover;
+}
+
 h1 {
   text-align: center;
 }
+
 table {
   border: 2px solid black;
 }

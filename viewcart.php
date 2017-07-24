@@ -42,6 +42,7 @@
 
   </table>
 
+  <br>
   <a href="checkout.php"><button type="button">Checkout</button></a>
 
 </body>

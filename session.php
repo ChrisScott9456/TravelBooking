@@ -13,6 +13,6 @@
    $login_session = $row['username'];
 
    if(!isset($_SESSION['login_user'])){
-      header("location:menu.php");
+      header("location: login.php");
    }
 ?>

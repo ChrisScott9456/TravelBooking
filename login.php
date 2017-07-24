@@ -1,6 +1,8 @@
 <?php
    include("config.php");
    session_start();
+   $error = "";
+   $_SESSION['login_user'] = "";
 
    if($_SERVER["REQUEST_METHOD"] == "POST") {
       // username and password sent from form
@@ -11,7 +13,6 @@
       $sql = "SELECT username FROM customers WHERE username = '$myusername' and password = '$mypassword'";
       $result = mysqli_query($db,$sql);
       $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-      $active = $row['active'];
 
       $count = mysqli_num_rows($result);
 
@@ -37,14 +38,27 @@
 
 </head>
 
-<body>
+<body class="centered">
+
+  <a href="menu.php">Main</a>
 
   <h1>Login Page</h1>
   <form method = "POST">
-    <label>UserName  :</label><input type = "text" name = "username" class = "box"/><br /><br />
-    <label>Password  :</label><input type = "password" name = "password" class = "box" /><br/><br />
-    <input type = "submit" value = " Submit "/><br />
+    <table class="centered">
+      <tr>
+        <td>Username: </td>
+        <td><input type="text" name="username" class="box"></td>
+      </tr>
+      <tr>
+        <td>Password: </td>
+        <td><input type="password" name="password" class="box"></td>
+      </tr>
+    </table>
+    <br>
+    <input type="submit" value=" Submit ">
   </form>
+
+  <div style="font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
 
 </body>
 
