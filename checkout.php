@@ -38,7 +38,7 @@
 </head>
 
 <body class="centered">
-  <a href="menu.php">Start Over</a>
+  <a href="logout.php">Start Over</a>
 
   <br>
 
@@ -81,10 +81,9 @@
   </table>
 
   <br>
-
-  <div id="button">
-    <a href="profile.php"><button type="button">Checkout</button></a>
-  </div>
+    <form action="submitorder.php" method="post">
+      <input type="submit" value=" Checkout ">
+    </form>
 
   <script src="creditcard.js"></script>
 

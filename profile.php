@@ -18,7 +18,8 @@
 </head>
 
 <body class="centered">
-  <p><?php echo $_SESSION['login_user']; ?></p>
+  <a href="menu.php" class="main">Main</a>
+  <br>
 
   <a href="login.php"><button id="login" type="button">Login</button></a>
   <a href="profile.php"><button id="profile" type="button">View Profile</button></a>

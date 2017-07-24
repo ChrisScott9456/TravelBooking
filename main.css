@@ -20,8 +20,12 @@ td {
   border: 1px solid black;
 }
 
-#login {
-
+.main {
+  font-size: 30px;
+  text-decoration: none;
+  background: gray;
+  color: white;
+  padding: 5px;
 }
 
 #menu {

@@ -1,5 +1,6 @@
 DROP TABLE IF EXISTS `inventory`;
 DROP TABLE IF EXISTS `customers`;
+DROP TABLE IF EXISTS `orders`;
 
 CREATE TABLE IF NOT EXISTS `inventory` (
   `id` int NOT NULL AUTO_INCREMENT,

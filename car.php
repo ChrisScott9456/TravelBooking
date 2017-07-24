@@ -14,6 +14,7 @@
 
 <body class="centered">
   <a href="logout.php">Start Over</a>
+  <p>Logged in as: <?php echo $_SESSION['login_user']; ?></p>
 
 <!-- This section is where a rental car is chosen and added to the shopping cart -->
   <h1>Choose a Rental Car:</h1>

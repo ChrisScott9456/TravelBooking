@@ -13,7 +13,7 @@
 </head>
 
 <body class="centered">
-  <p><?php echo $_SESSION['login_user']; ?></p>
+  <p>Logged in as: <?php echo $_SESSION['login_user']; ?></p>
 
   <a href="login.php"><button id="login" type="button">Login</button></a>
   <a href="profile.php"><button id="profile" type="button">View Profile</button></a>

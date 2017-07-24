@@ -23,6 +23,7 @@
 
 <body class="centered">
   <a href="logout.php">Start Over</a>
+  <p>Logged in as: <?php echo $_SESSION['login_user']; ?></p>
 
 <!-- This section is where a flight is chosen and added to the shopping cart -->
   <h1>Choose a Parking Option:</h1>

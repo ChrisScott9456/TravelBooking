@@ -4,25 +4,29 @@
    $error = "";
    $_SESSION['login_user'] = "";
 
+   //If there is a post for username or password, query the database
    if($_SERVER["REQUEST_METHOD"] == "POST") {
-      // username and password sent from form
 
       $myusername = mysqli_real_escape_string($db,$_POST['username']);
       $mypassword = mysqli_real_escape_string($db,$_POST['password']);
 
+      //Search the database for an entry matching the username and passowrd
       $sql = "SELECT username FROM customers WHERE username = '$myusername' and password = '$mypassword'";
       $result = mysqli_query($db,$sql);
       $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 
       $count = mysqli_num_rows($result);
 
-      // If result matched $myusername and $mypassword, table row must be 1 row
-
       if($count == 1) {
          $_SESSION['login_user'] = $myusername;
 
-         header("location: menu.php");
+        if($_SESSION['end']) {
+          header("location: menu.php");
+        }else {
+          header("location: checkout.php");
+        }
       }else {
+          //If the user doesn't exist, send error message to register user
          $error = 'Your Login Name or Password is invalid. Click here to register: <a href="register.php"><button>Register</button></a>';
       }
    }
@@ -40,7 +44,8 @@
 
 <body class="centered">
 
-  <a href="menu.php">Main</a>
+  <a href="menu.php" class="main">Main</a>
+  <p>Logged in as: <?php echo $_SESSION['login_user']; ?></p>
 
   <h1>Login Page</h1>
   <form method = "POST">
