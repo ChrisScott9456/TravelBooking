@@ -9,6 +9,12 @@
 
   <title>Final Project - Travel Booking</title>
   <style>
+    html {
+      background-image: url("bg.png");
+      background-position: center;
+      background-size: cover;
+    }
+
     h1 {
       text-align: center;
     }
@@ -77,7 +83,7 @@
   <br>
 
   <div id="button">
-    <a href="menu.php"><button type="button">Checkout</button></a>
+    <a href="profile.php"><button type="button">Checkout</button></a>
   </div>
 
   <script src="creditcard.js"></script>

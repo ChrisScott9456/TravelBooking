@@ -23,7 +23,7 @@
 
          header("location: menu.php");
       }else {
-         $error = "Your Login Name or Password is invalid";
+         $error = 'Your Login Name or Password is invalid. Click here to register: <a href="register.php"><button>Register</button></a>';
       }
    }
 ?>
@@ -58,7 +58,8 @@
     <input type="submit" value=" Submit ">
   </form>
 
-  <div style="font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
+  <br>
+  <div><?php echo $error; ?></div>
 
 </body>
 

@@ -29,6 +29,9 @@ CREATE TABLE IF NOT EXISTS `orders` (
   
 INSERT INTO customers (username, password) VALUES
 	('cscott71', 'test');
+	
+INSERT INTO orders (username, flight, flightprice, seating, seatprice, rentalcar, carprice, parking, parkingprice) VALUES
+	('cscott71', 'Alabama', '150', 'First Class', '200', 'SUV_Rental_Car', '300', 'VIP', '180');
 
 
 INSERT INTO inventory (itype, name, price) VALUES

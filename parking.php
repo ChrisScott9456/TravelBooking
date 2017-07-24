@@ -22,7 +22,7 @@
 </head>
 
 <body class="centered">
-  <a href="menu.php">Start Over</a>
+  <a href="logout.php">Start Over</a>
 
 <!-- This section is where a flight is chosen and added to the shopping cart -->
   <h1>Choose a Parking Option:</h1>
