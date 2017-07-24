@@ -10,7 +10,7 @@
   <title>Final Project - Travel Booking</title>
   <style>
     html {
-      background-image: url("bg.png");
+      background-image: url("img/bg.png");
       background-position: center;
       background-size: cover;
     }
@@ -48,7 +48,7 @@
     <tr>
       <td>Card Number</td>
       <td>Security Code</td>
-      <td rowspan="4"><img id="cardtype" src="none.png"></img></td>
+      <td rowspan="4"><img id="cardtype" src="img/none.png"></img></td>
     </tr>
     <tr>
       <td><input id="cardNumber" onchange="verifyCard()" type="text"></td>

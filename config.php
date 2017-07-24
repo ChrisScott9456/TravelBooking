@@ -4,6 +4,4 @@
    define('DB_PASSWORD', '');
    define('DB_DATABASE', 'finalproject');
    $db = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
-
-   $_SESSION['end'] = true;
 ?>

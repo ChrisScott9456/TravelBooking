@@ -3,6 +3,7 @@
    session_start();
 
    $_SESSION['counter'] = 0;
+   $_SESSION['end'] = true;
 
    $user_check = $_SESSION['login_user'];
 
