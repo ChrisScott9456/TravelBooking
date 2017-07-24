@@ -19,6 +19,7 @@ function seatsAvailable() {
       document.getElementById("available").innerHTML = FCava + " of 30 seats available!";
       document.getElementById("cart").disabled = false;
       document.getElementById("pricesubmit").setAttribute("value", price);
+      document.getElementById("seatPrice").innerHTML = "Price: $" + price;
     }else{
       document.getElementById("cart").disabled = true;
       document.getElementById("available").innerHTML = FCava + " of 30 seats available! Please choose another option!";
@@ -29,6 +30,7 @@ function seatsAvailable() {
       document.getElementById("available").innerHTML = BCava + " of 45 seats available!";
       document.getElementById("cart").disabled = false;
       document.getElementById("pricesubmit").setAttribute("value", price);
+      document.getElementById("seatPrice").innerHTML = "Price: $" + price;
     }else{
       document.getElementById("cart").disabled = true;
       document.getElementById("available").innerHTML = BCava + " of 45 seats available! Please choose another option!";
@@ -39,6 +41,7 @@ function seatsAvailable() {
       document.getElementById("available").innerHTML = Eava + " of 286 seats available!";
       document.getElementById("cart").disabled = false;
       document.getElementById("pricesubmit").setAttribute("value", price);
+      document.getElementById("seatPrice").innerHTML = "Price: $" + price;
     }else{
       document.getElementById("cart").disabled = true;
       document.getElementById("available").innerHTML = Eava + " of 286 seats available! Please choose another option!";

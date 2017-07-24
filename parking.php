@@ -46,7 +46,7 @@
     </form>
 
     <p id="available"></p>
-    <p id="pricez"></p>
+    <p id="pricez">Price: $0</p>
 
   <script src="parking.js"></script>
 

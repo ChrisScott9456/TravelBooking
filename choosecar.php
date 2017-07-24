@@ -10,16 +10,6 @@
   <title>Final Project - Travel Booking</title>
   <link rel = "stylesheet" type="text/css" href="main.css">
 
-  <script>
-    function setCart() {
-      if(document.getElementById("car").value == ""){
-        document.getElementById("cart").disabled = true;
-      }else{
-        document.getElementById("cart").disabled = false;
-      }
-    }
-  </script>
-
 </head>
 
 <body class="centered">
@@ -36,6 +26,10 @@
 
     <input id="cart" type="submit" value="Add to Cart" disabled>
   </form>
+
+  <p id="carPrice">Price: $0</p>
+
+  <script src="car.js"></script>
 
 </body>
 

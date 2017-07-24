@@ -29,8 +29,8 @@
       <input type="text" name="pricesubmit" id="pricesubmit" value="0" style="visibility: hidden">
     </form>
 
-    <br>
     <p id="available"></p>
+    <p id="seatPrice">Price: $0</p>
 
   <script src="seating.js"></script>
 

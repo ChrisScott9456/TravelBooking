@@ -10,6 +10,7 @@
 		//If a flight option is chosen, add it to the cart
 		if($_POST['flight'] != ''){
 			$flight = $_POST['flight'];
+			$flight = preg_replace("/[^a-zA-Z]+/", "", $flight);
 			$_SESSION['counter']++; //Add another item to the cart
 
 			$_SESSION['shoppingCart'][$_SESSION['counter']][0] =  $flight; //Set the new item's name

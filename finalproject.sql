@@ -81,7 +81,7 @@ INSERT INTO inventory (itype, name, price) VALUES
 	('flight', 'West Virginia', '350'),
 	('flight', 'Wisconsin', '250'),
 	('flight', 'Wyoming', '350'),
-	('car', 'SUV', '300'),
-	('car', 'Compact', '150'),
-	('car', 'Midsize', '200'),
-	('car', 'Luxury', '500');
+	('car', 'SUV Rental Car', '300'),
+	('car', 'Compact Rental Car', '150'),
+	('car', 'Midsize Rental Car', '200'),
+	('car', 'Luxury Rental Car', '500');

@@ -32,7 +32,7 @@ function parkingAvailable() {
       document.getElementById("available").innerHTML = VIPava + " of 20 parking spots available!";
       document.getElementById("cart").disabled = false;
       document.getElementById("pricesubmit").setAttribute("value", price);
-      document.getElementById("pricez").innerHTML = '$' + price;
+      document.getElementById("pricez").innerHTML = 'Price: $' + price;
     }else{
       document.getElementById("cart").disabled = true;
       document.getElementById("available").innerHTML = VIPava + " of 20 spots available! Please choose another option!";
@@ -43,7 +43,7 @@ function parkingAvailable() {
       document.getElementById("available").innerHTML = Aava + " of 50 seats available!";
       document.getElementById("cart").disabled = false;
       document.getElementById("pricesubmit").setAttribute("value", price);
-      document.getElementById("pricez").innerHTML = '$' + price;
+      document.getElementById("pricez").innerHTML = 'Price: $' + price;
     }else{
       document.getElementById("cart").disabled = true;
       document.getElementById("available").innerHTML = Aava + " of 50 seats available! Please choose another option!";
@@ -54,7 +54,7 @@ function parkingAvailable() {
       document.getElementById("available").innerHTML = Bava + " of 75 spots available!";
       document.getElementById("cart").disabled = false;
       document.getElementById("pricesubmit").setAttribute("value", price);
-      document.getElementById("pricez").innerHTML = '$' + price;
+      document.getElementById("pricez").innerHTML = 'Price: $' + price;
     }else{
       document.getElementById("cart").disabled = true;
       document.getElementById("available").innerHTML = Bava + " of 75 seats available! Please choose another option!";
@@ -65,7 +65,7 @@ function parkingAvailable() {
       document.getElementById("available").innerHTML = Cava + " of 100 spots available!";
       document.getElementById("cart").disabled = false;
       document.getElementById("pricesubmit").setAttribute("value", price);
-      document.getElementById("pricez").innerHTML = '$' + price;
+      document.getElementById("pricez").innerHTML = 'Price: $' + price;
     }else{
       document.getElementById("cart").disabled = true;
       document.getElementById("available").innerHTML = Cava + " of 100 seats available! Please choose another option!";
