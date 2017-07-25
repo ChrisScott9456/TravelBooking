@@ -18,7 +18,7 @@
 </head>
 
 <body class="centered">
-  <a href="menu.php" class="main">Main</a>
+  <a href="menu.php"><button class="main">Main</button></a>
   <br>
 
   <a href="login.php"><button id="login" type="button">Login</button></a>

@@ -8,6 +8,10 @@ h1 {
   text-align: center;
 }
 
+button, input {
+  cursor: pointer;
+}
+
 table {
   border: 2px solid black;
 }
@@ -20,15 +24,7 @@ td {
   border: 1px solid black;
 }
 
-.main {
-  font-size: 30px;
-  text-decoration: none;
-  background: gray;
-  color: white;
-  padding: 5px;
-}
-
-#menu {
+#menu, .main {
   border: 1px solid white;
   border-radius: 15px;
   font-size: 50px;
@@ -45,7 +41,11 @@ td {
   transition-property: color, background-color;
 }
 
-#menu:hover, #menu:focus, #menu:active {
+.main {
+  font-size: 30px;
+}
+
+#menu:hover, #menu:focus, #menu:active, .main:hover, .main:focus, .main:active{
   background-color: #2098D1;
   color: white;
 }

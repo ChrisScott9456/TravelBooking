@@ -61,7 +61,7 @@
 
 <body class="centered">
 
-  <a href="menu.php" class="main">Main</a>
+  <a href="menu.php"><button class="main">Main</button></a>
 
   <h1>Registration Page</h1>
   <form method = "POST">

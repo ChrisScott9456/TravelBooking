@@ -44,8 +44,7 @@
 
 <body class="centered">
 
-  <a href="menu.php" class="main">Main</a>
-  <p>Logged in as: <?php echo $_SESSION['login_user']; ?></p>
+  <a href="menu.php"><button class="main">Main</button></a>
 
   <h1>Login Page</h1>
   <form method = "POST">

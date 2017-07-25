@@ -19,7 +19,7 @@
   <a href="profile.php"><button id="profile" type="button">View Profile</button></a>
   <a href="logout.php"><button id="logout" type="button">Logout</button></a>
   <br><br>
-  <a href="flight.php"><button id="menu" type="button">Booking</button></a>
+  <a href="flight.php"><button id="menu" type="button">Start Booking</button></a>
 
 </body>
 
